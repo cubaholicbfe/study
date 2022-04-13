@@ -3,3 +3,4 @@ something new
 3rd line
 4th line
 B1
+B2
