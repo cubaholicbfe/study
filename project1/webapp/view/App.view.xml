@@ -1,0 +1,52 @@
+<mvc:View controllerName="ui5school.project1.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="app">
+        <Page id="MainPage" title="{i18n>title}">
+            <content>
+                <HBox id="idHBox1" alignItems="Center">
+                    <Label id="idLabel1"/>
+                    <Button id="idBtn1" text="Button1" class="sapUiSmallMargin"/>
+                    <Button id="idBtn2" text="Button2" press="onClick"/>
+                </HBox>
+                <Text id="idText1" text="TestDataModel declared in Component.js is used here:" />
+                <List   id="idList1"
+                        items="{TestDataModel>/Data}" >
+                    <StandardListItem
+                        id = "idListItem1"
+                        title="{TestDataModel>Name}"
+                        description="{parts: [ 
+                                        {path: 'TestDataModel>Description'},
+                                        {path: 'TestDataModel>PubYear'} 
+                                    ]}" 
+                    /> 
+                </List>
+                <Text id="idText2" text="TestData2Model declared in manifest.json is used here:" />
+                <List   id="idList2"
+                        items="{TestData2Model>/Objects}" >
+                    <StandardListItem
+                        id = "idListItem2"
+                        title="{TestData2Model>Name}"
+                        description="{parts: [ 
+                                        {path: 'TestData2Model>Supplier'},
+                                        {path: 'TestData2Model>Price'} 
+                                    ]}" 
+                    /> 
+                </List>
+                <Text id="idText3" text="OData-model declared in manifest.json is used here:" />
+                <List   id="idList3"
+                        items="{/SH_MessWertSet}" >
+                    <StandardListItem
+                        id = "idListItem3"
+                        title="{Codegruppe}"
+                        description="{parts: [ 
+                                        {path: 'Code'},
+                                        {path: 'Kurztext'} 
+                                    ]}" 
+                    /> 
+                </List>
+            </content>
+        </Page>
+    </App>
+</mvc:View>

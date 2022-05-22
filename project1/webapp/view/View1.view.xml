@@ -1,0 +1,10 @@
+<mvc:View controllerName="ui5school.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <Text id="Txt1" text="Hello world!"></Text>
+            <Button id="BtnView1" text="Texttext"></Button>
+        </content>
+    </Page>
+</mvc:View>
